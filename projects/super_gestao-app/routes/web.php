@@ -14,10 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Hello World!';
 });
 
 Route::get('inicio', function() {
     $users = DB::select('select * from users');
     var_dump($users);
 });
+
+Route::get('/sobre-nos', function () {
+    return 'Hello World!';
+});
+
+Route::get('/contato', function () {
+    return 'Hello World!';
+});
+
+
