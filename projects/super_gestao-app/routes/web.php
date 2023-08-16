@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\PrincipalController;
+use App\Http\Controllers\SobreNosController;
+use App\Http\Controllers\ContatoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [PrincipalController::class, 'principal']);
+#Route::get('/', 'App\Http\Controllers\PrincipalController@principal');
 
-Route::get('inicio', function() {
-    $users = DB::select('select * from users');
-    var_dump($users);
-});
+Route::get('/sobre-nos', [SobreNosController::class, 'sobreNos']);
+
+Route::get('/contato    ', [ContatoController::class, 'contato']);
+
+
+

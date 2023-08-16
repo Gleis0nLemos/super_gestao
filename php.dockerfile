@@ -27,3 +27,4 @@ RUN echo 'date.timezone="America/Sao_Paulo"' >> /usr/local/etc/php/conf.d/date.i
     && echo 'opcache.fast_shutdown=1' >> /usr/local/etc/php/conf.d/opcache
 
 RUN docker-php-ext-install pdo pdo_mysql
+
