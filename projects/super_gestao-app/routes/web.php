@@ -26,11 +26,12 @@ Route::get('/contato', [ContatoController::class, 'contato']);
 
 Route::get('/login', function () {return 'login';});
 
-Route::get('/clientes', function () {return 'clientes';});
+Route::prefix('/app')->group(function () {
+    Route::get('/clientes', function () {return 'clientes';});
+    Route::get('/fornecedores', function () {return 'fornecedores';});
+    Route::get('/produtos', function () {return 'produtos';});
+});
 
-Route::get('/fornecedores', function () {return 'fornecedores';});
-
-Route::get('/produtos', function () {return 'produtos';});
 
 
 
