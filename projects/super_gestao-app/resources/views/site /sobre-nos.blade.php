@@ -7,11 +7,11 @@
 </head>
 <body>
     <h1>Sobre nós</h1>
-
+ 
     <ul>
-        <li><a href="/">Principal</a></li>
-        <li><a href="/contato">Contato</a></li>
-        <li><a href="/sobre-nos">Sobre nós</a></li>
+        <li><a href="{{ route('site.index') }}">Principal</a></li>
+        <li><a href="{{ route('site.contato') }}">Contato</a></li>
+        <li><a href="{{ route('site.sobre-nos') }}">Sobre nós</a></li>
     </ul>
 </body>
 </html>
