@@ -12,17 +12,12 @@
 
 @endphp
 
-Fornecedor: {{ $fornecedores[0]['nome'] }}
-Status: {{ $fornecedores[0]['status'] }}
-
-<br>
-
-@if(!($fornecedores[0]['status'] == 'S'))
-    Fornecedor inativo
-@endif
-
-@unless($fornecedores[0]['status'] == 'S') {{-- se o retorno da condição for false --}}
-    Fornecedor inativo
-@endunless
+@isset($fornecedores)
+    Fornecedor: {{ $fornecedores[0]['nome'] }}
+    Status: {{ $fornecedores[0]['status'] }}
+    @isset($fornecedores[0]['cnpj'])
+        CNPJ: {{ $fornecedores[0]['cnpj'] }}
+    @endisset
+@endisset
 </body>
 </html>
