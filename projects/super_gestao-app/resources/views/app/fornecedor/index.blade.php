@@ -12,7 +12,7 @@
     
 @endphp
 
-@isset($fornecedores) #retorna true se a variável estiver definida
+@isset($fornecedores) {{-- retorna true se a variável estiver definida --}}
     Fornecedor: {{ $fornecedores[0]['nome'] }}
     Status: {{ $fornecedores[0]['status'] }}
     @isset($fornecedores[0]['cnpj'])
